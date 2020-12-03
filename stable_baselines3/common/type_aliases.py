@@ -41,3 +41,11 @@ class RolloutReturn(NamedTuple):
     episode_timesteps: int
     n_episodes: int
     continue_training: bool
+
+class ReplayBufferPriorSamples(NamedTuple):
+    observations: th.Tensor
+    actions: th.Tensor
+    next_observations: th.Tensor
+    dones: th.Tensor
+    rewards: th.Tensor
+    additionals: th.Tensor
